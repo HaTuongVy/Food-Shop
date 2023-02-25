@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  font-family: 'inherit';
 }
 
 .App-logo {
@@ -25,12 +24,8 @@
   color: white;
 }
 
-.bg-web {
-  background-color: #b7dc36 !important;
-}
-
-.color-web {
-  color: #b7dc36 !important
+.App-link {
+  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -41,28 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.shop::after,
-.new::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  z-index: 100;
-  height: 100px;
-  width: 140px;
-}
-
-.shop > .dropdown-menu.show{
-  position: absolute;
-  display: block;
-  left: -150px;
-}
-
-.drop-item-shop {
-  display: none;
-}
-
-.show.drop-item-shop {
-  display: block;
-}
-
