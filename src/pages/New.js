@@ -1,5 +1,7 @@
-import { Card, Col, Container, ProgressBar, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import TopBanner from "../components/TopBanner";
+import FooterAdd from "../components/FooterAdd";
+import { Link } from "react-router-dom";
 import "./New.css";
 
 const New = () => {
@@ -20,16 +22,24 @@ const New = () => {
                   <tbody>
                     <tr>
                       <td>
-                        <a className="new-hover text-decoration-none text-dark ">
+                        <Link
+                          className="new-hover text-decoration-none text-dark"
+                          as={Link}
+                          to="/new"
+                        >
                           Kinh nghiệm chọn thực phẩm
-                        </a>
+                        </Link>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <a className="new-hover text-decoration-none text-dark ">
+                        <Link
+                          className="new-hover text-decoration-none text-dark"
+                          as={Link}
+                          to="/new"
+                        >
                           Tin khuyến mãi
-                        </a>
+                        </Link>
                       </td>
                     </tr>
                   </tbody>
@@ -48,7 +58,11 @@ const New = () => {
                     <tbody>
                       <tr>
                         <td>
-                          <a className="new-hover text-decoration-none text-dark ">
+                          <Link
+                            className="new-hover text-decoration-none text-dark"
+                            as={Link}
+                            to="/newdetail"
+                          >
                             <img
                               src={
                                 process.env.PUBLIC_URL +
@@ -61,12 +75,16 @@ const New = () => {
                             <h6>
                               CHÚC MỪNG NGÀY HỘI GIA ĐÌNH VIỆT NAM 28/6/2022
                             </h6>
-                          </a>
+                          </Link>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <a className="new-hover text-decoration-none text-dark ">
+                          <Link
+                            className="new-hover text-decoration-none text-dark"
+                            as={Link}
+                            to="/newdetail"
+                          >
                             <img
                               src={
                                 process.env.PUBLIC_URL +
@@ -77,12 +95,16 @@ const New = () => {
                               alt="bannar"
                             ></img>
                             <h6>NẤU ĂN NGON HƠN NHỜ THỰC PHẨM SẠCH</h6>
-                          </a>
+                          </Link>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <a className="new-hover text-decoration-none text-dark ">
+                          <Link
+                            className="new-hover text-decoration-none text-dark"
+                            as={Link}
+                            to="/newdetail"
+                          >
                             <img
                               src={
                                 process.env.PUBLIC_URL +
@@ -95,12 +117,16 @@ const New = () => {
                             <h6>
                               CHƯƠNG TRÌNH KHUYẾN MÃI SIÊU HẤP DẪN - SUPER CHEAP
                             </h6>
-                          </a>
+                          </Link>
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <a className="new-hover text-decoration-none text-dark ">
+                          <Link
+                            className="new-hover text-decoration-none text-dark"
+                            as={Link}
+                            to="/newdetail"
+                          >
                             <img
                               src={
                                 process.env.PUBLIC_URL +
@@ -113,7 +139,7 @@ const New = () => {
                             <h6>
                               6 THỰC PHẨM BỔ NÃO, TĂNG CƯỜNG TRÍ NHỚ BẠN NÊN
                             </h6>
-                          </a>
+                          </Link>
                         </td>
                       </tr>
                     </tbody>
@@ -123,122 +149,285 @@ const New = () => {
               <Col className="col-xs-12 col-md-9">
                 <Row>
                   <Col>
-                    <Card>
-                      <Card.Img
-                        variant="top"
-                        src="../img/banner-ngay-gia-dinh-viet-nam.jpg"
-                        style={{ height: "320px" }}
-                      />
-                      <Card.Body className="align-content-end">
-                        <Card.Title>
-                          CHÚC MỪNG NGÀY HỘI GIA ĐÌNH VIỆT NAM 28/6/2018
-                        </Card.Title>
-                        <Card.Text>
-                          Ngày 28/6 hằng năm được chọn là ngày gia đình Việt Nam
-                          - cùng đến siêu thị Organic để mang về cho nhà bạn
-                          những...
-                        </Card.Text>
-                      </Card.Body>
-                    </Card>
+                    <div className="container-new-img mb-4">
+                      <Link href="#" as={Link} to="/newdetail">
+                        <img
+                          src={
+                            process.env.PUBLIC_URL +
+                            "../img/home_custom_bigsale_01.png"
+                          }
+                          style={{ maxWidth: "100%", height: "320px" }}
+                          alt="bannar"
+                        ></img>
+                        <div className="overlay">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL +
+                              "../img/home_custom_bigsale_01.png"
+                            }
+                            className="image"
+                            style={{ maxWidth: "100%", height: "320px" }}
+                            alt="bannar"
+                          ></img>
+                        </div>
+                      </Link>
+                    </div>
+                    <div>
+                      <h5 className="mb-4 pb-3">
+                        <Link
+                          href="#"
+                          className="new-hover text-decoration-none text-dark"
+                          as={Link}
+                          to="/newdetail"
+                        >
+                          MẸO CHỌN THỰC PHẨM AN TOÀN
+                        </Link>
+                      </h5>
+                      <p>
+                        Vấn nạn mất vệ sinh an toàn thực phẩm đang lan dần đến
+                        bữa cơm của mọi gia đình. Sau đây là những kinh nghiệm
+                        thực tế về...
+                      </p>
+                    </div>
                   </Col>
                   <Col>
-                    <Card>
-                      <Card.Img
-                        variant="top"
-                        style={{ height: "320px" }}
-                        src="../img/bai-di-cho-thoi-lo-thuc-pham-ban.jpg"
-                      />
-                      <Card.Body>
-                        <Card.Title>
+                    <div className="container-new-img mb-4">
+                      <Link as={Link} to="/newdetail">
+                        <img
+                          src={
+                            process.env.PUBLIC_URL +
+                            "../img/bai-di-cho-thoi-lo-thuc-pham-ban.jpg"
+                          }
+                          style={{ maxWidth: "100%", height: "320px" }}
+                          alt="bannar"
+                        ></img>
+                        <div className="overlay">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL +
+                              "../img/bai-di-cho-thoi-lo-thuc-pham-ban.jpg"
+                            }
+                            className="image"
+                            style={{ maxWidth: "100%", height: "320px" }}
+                            alt="bannar"
+                          ></img>
+                        </div>
+                      </Link>
+                    </div>
+                    <div>
+                      <h5>
+                        <Link
+                          className="new-hover text-decoration-none text-dark"
+                          as={Link}
+                          to="/newdetail"
+                        >
                           6 THỰC PHẨM BỔ NÃO, TĂNG CƯỜNG TRÍ NHỚ BẠN NÊN ĂN...
-                        </Card.Title>
-                        <Card.Text>
-                          Chúng ta đều biết rằng uống cà phê thường giúp chúng
-                          ta tỉnh táo lâu hơn và linh hoạt hơn. Để tăng sự
-                          tập...
-                        </Card.Text>
-                      </Card.Body>
-                    </Card>
+                        </Link>
+                      </h5>
+                      <p>
+                        Chúng ta đều biết rằng uống cà phê thường giúp chúng ta
+                        tỉnh táo lâu hơn và linh hoạt hơn. Để tăng sự tập...
+                      </p>
+                    </div>
                   </Col>
                 </Row>
                 <Row className="mt-4">
                   <Col>
-                    <Card>
-                      <Card.Img
-                        variant="top"
-                        style={{ height: "320px" }}
-                        src="../img/su-kien-black-friday-2017-3.jpg"
-                      />
-                      <Card.Body>
-                        <Card.Title>
+                    <div className="container-new-img mb-4">
+                      <Link as={Link} to="/newdetail">
+                        <img
+                          src={
+                            process.env.PUBLIC_URL +
+                            "../img/ve-sinh-an-toan-thuc-pham-benhviendetmay-4.jpg"
+                          }
+                          style={{
+                            maxWidth: "100%",
+                            width: "500px",
+                            height: "320px",
+                          }}
+                          alt="bannar"
+                        ></img>
+                        <div className="overlay">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL +
+                              "../img/ve-sinh-an-toan-thuc-pham-benhviendetmay-4.jpg"
+                            }
+                            className="image"
+                            style={{
+                              maxWidth: "100%",
+                              width: "500px",
+                              height: "320px",
+                            }}
+                            alt="bannar"
+                          ></img>
+                        </div>
+                      </Link>
+                    </div>
+                    <div>
+                      <h5 className="mb-4 pb-3">
+                        <Link
+                          as={Link}
+                          to="/newdetail"
+                          className="new-hover text-decoration-none text-dark"
+                        >
+                          NẤU ĂN NGON HƠN NHỜ THỰC PHẨM SẠCH
+                        </Link>
+                      </h5>
+                      <p>
+                        Ăn uống là chuyện muôn thuở của con người. Ngày xưa chỉ
+                        cần ăn no, bây giờ chúng ta cần ăn ngon. Rồi vấn nạn
+                        thực phẩm...
+                      </p>
+                    </div>
+                  </Col>
+                  <Col>
+                    <div className="container-new-img mb-4">
+                      <Link as={Link} to="/newdetail">
+                        <img
+                          src={
+                            process.env.PUBLIC_URL +
+                            "../img/su-kien-black-friday-2017-3.jpg"
+                          }
+                          style={{
+                            maxWidth: "100%",
+                            width: "500px",
+                            height: "320px",
+                          }}
+                          alt="bannar"
+                        ></img>
+                        <div className="overlay">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL +
+                              "../img/su-kien-black-friday-2017-3.jpg"
+                            }
+                            className="image"
+                            style={{
+                              maxWidth: "100%",
+                              width: "500px",
+                              height: "320px",
+                            }}
+                            alt="bannar"
+                          ></img>
+                        </div>
+                      </Link>
+                    </div>
+                    <div>
+                      <h5>
+                        <Link
+                          as={Link}
+                          to="/newdetail"
+                          className="new-hover text-decoration-none text-dark"
+                        >
                           CHƯƠNG TRÌNH KHUYẾN MÃI SIÊU HẤP DẪN - SUPER CHEAP
                           FRIDAY...
-                        </Card.Title>
-                        <Card.Text>
-                          Một bất ngờ quá lớn và thú vị, một chương trình khuyến
-                          mãi cực kì hấp dẫn và siêu khủng lần đầu...
-                        </Card.Text>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                  <Col>
-                    <Card>
-                      <Card.Img
-                        variant="top"
-                        style={{ height: "320px" }}
-                        src="../img/ve-sinh-an-toan-thuc-pham-benhviendetmay-4.jpg"
-                      />
-                      <Card.Body>
-                        <Card.Title>
-                          NẤU ĂN NGON HƠN NHỜ THỰC PHẨM SẠCH
-                        </Card.Title>
-                        <Card.Text>
-                          Ăn uống là chuyện muôn thuở của con người. Ngày xưa
-                          chỉ cần ăn no, bây giờ chúng ta cần ăn ngon. Rồi vấn
-                          nạn thực phẩm...
-                        </Card.Text>
-                      </Card.Body>
-                    </Card>
+                        </Link>
+                      </h5>
+                      <p>
+                        Một bất ngờ quá lớn và thú vị, một chương trình khuyến
+                        mãi cực kì hấp dẫn và siêu khủng lần đầu...
+                      </p>
+                    </div>
                   </Col>
                 </Row>
                 <Row className="mt-4">
                   <Col>
-                    <Card>
-                      <Card.Img
-                        variant="top"
-                        style={{ height: "320px" }}
-                        src="../img/cach-ket-hop-cac-thuc-pham2.jpg"
-                      />
-                      <Card.Body>
-                        <Card.Title>
+                    <div className="container-new-img mb-4">
+                      <Link as={Link} to="/newdetail">
+                        <img
+                          src={
+                            process.env.PUBLIC_URL +
+                            "../img/cach-ket-hop-cac-thuc-pham2.jpg"
+                          }
+                          style={{
+                            maxWidth: "100%",
+                            width: "500px",
+                            height: "320px",
+                          }}
+                          alt="bannar"
+                        ></img>
+                        <div className="overlay">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL +
+                              "../img/cach-ket-hop-cac-thuc-pham2.jpg"
+                            }
+                            className="image"
+                            style={{
+                              maxWidth: "100%",
+                              width: "500px",
+                              height: "320px",
+                            }}
+                            alt="bannar"
+                          ></img>
+                        </div>
+                      </Link>
+                    </div>
+                    <div>
+                      <h5>
+                        <Link
+                          as={Link}
+                          to="/newdetail"
+                          className="new-hover text-decoration-none text-dark"
+                        >
                           LỰA CHỌN THỰC PHẨM SẠCH VÀ NẤU ĂN ĐÚNG CÁCH
-                        </Card.Title>
-                        <Card.Text>
-                          Ăn uống là nhu cầu thiết yếu của con người để duy trì
-                          sự sống và phát triển. Xã hội ngày càng tiến bộ,
-                          nhận...
-                        </Card.Text>
-                      </Card.Body>
-                    </Card>
+                        </Link>
+                      </h5>
+                      <p>
+                        Ăn uống là nhu cầu thiết yếu của con người để duy trì sự
+                        sống và phát triển. Xã hội ngày càng tiến bộ, nhận...
+                      </p>
+                    </div>
                   </Col>
                   <Col>
-                    <Card>
-                      <Card.Img
-                        variant="top"
-                        style={{ height: "320px" }}
-                        src="../img/home_custom_blog_01.jpg"
-                      />
-                      <Card.Body>
-                        <Card.Title>
+                    <div className="container-new-img mb-4">
+                      <Link as={Link} to="/newdetail">
+                        <img
+                          src={
+                            process.env.PUBLIC_URL +
+                            "../img/home_custom_blog_01.jpg"
+                          }
+                          style={{
+                            maxWidth: "100%",
+                            width: "500px",
+                            height: "320px",
+                          }}
+                          alt="bannar"
+                        ></img>
+                        <div className="overlay">
+                          <img
+                            src={
+                              process.env.PUBLIC_URL +
+                              "../img/home_custom_blog_01.jpg"
+                            }
+                            className="image"
+                            style={{
+                              maxWidth: "100%",
+                              width: "500px",
+                              height: "320px",
+                            }}
+                            alt="bannar"
+                          ></img>
+                        </div>
+                      </Link>
+                    </div>
+                    <div>
+                      <h5>
+                        <Link
+                          as={Link}
+                          to="/newdetail"
+                          className="new-hover text-decoration-none text-dark"
+                        >
                           CÁCH LỰA CHỌN THỰC PHẨM TƯƠI SỐNG AN TOÀN
-                        </Card.Title>
-                        <Card.Text>
-                          Thực phẩm bẩn, nhiễm độc hiện nay đang là vấn đề nhức
-                          nhối của toàn xã hội, nhất là đối với các mặt hàng
-                          thực...
-                        </Card.Text>
-                      </Card.Body>
-                    </Card>
+                        </Link>
+                      </h5>
+                      <p>
+                        Thực phẩm bẩn, nhiễm độc hiện nay đang là vấn đề nhức
+                        nhối của toàn xã hội, nhất là đối với các mặt hàng
+                        thực...
+                      </p>
+                    </div>
                   </Col>
                 </Row>
               </Col>
@@ -246,6 +435,7 @@ const New = () => {
           </Col>
         </Row>
       </Container>
+      <FooterAdd></FooterAdd>
     </>
   );
 };

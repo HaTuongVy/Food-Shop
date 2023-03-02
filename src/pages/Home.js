@@ -7,6 +7,7 @@ import Carousel from "react-bootstrap/Carousel";
 import Nav from "react-bootstrap/Nav";
 import "./Home.css";
 import FooterAdd from "../components/FooterAdd";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
@@ -14,7 +15,7 @@ const Home = () => {
       <Container fluid className="p-0">
         <Row className="m-0">
           <Col className="p-0">
-            <Carousel>
+            <Carousel className="carousel-aboutus">
               <Carousel.Item>
                 <img
                   className="d-block w-100"
@@ -53,9 +54,13 @@ const Home = () => {
                       ligula lorem eu nisl. Integer a egestas mauris. Nam id
                       diam blandit, condimentum dolor ut, euismod arcu.
                     </p>
-                    <a href="#" className="card-link readMore-custom">
+                    <Link
+                      as={Link}
+                      to="/about"
+                      className="card-link readMore-custom"
+                    >
                       Read More
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -117,7 +122,9 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="readMore-sale mt-5">
-                  <a href="#">Shop now</a>
+                  <Link as={Link} to="/shopstore">
+                    Shop now
+                  </Link>
                 </div>
               </Col>
             </Row>
@@ -148,7 +155,9 @@ const Home = () => {
                         <h2>Save up to 50%</h2>
                         <h4>on your first purchase</h4>
                         <div className="readMore-banner readMore-banner-01 mt-4 pt-3">
-                          <a href="#">Shop now</a>
+                          <Link as={Link} to="/shopstore">
+                            Shop now
+                          </Link>
                         </div>
                       </div>
                     </Col>
@@ -163,7 +172,9 @@ const Home = () => {
                         <h2>Free Shipping</h2>
                         <h4>on order $99</h4>
                         <div className="readMore-banner readMore-banner-02 mt-4 pt-3">
-                          <a href="#">Shop now</a>
+                          <Link as={Link} to="/shopstore">
+                            Shop now
+                          </Link>
                         </div>
                       </div>
                     </Col>
@@ -310,22 +321,28 @@ const Home = () => {
                   <Card.Body>
                     <p className="more-blogs mb-2">
                       <span>
-                        <i className="fa-regular fa-clock"></i> 14:46 - 29/06/2018
+                        <i className="fa-regular fa-clock"></i> 14:46 -
+                        29/06/2018
                       </span>
                     </p>
                     <Card.Title>
-                      <a href="#/" className="card-blog-title mb-3">
+                      <Link
+                        href="#/"
+                        className="card-blog-title mb-3"
+                        as={Link}
+                        to="/newdetail"
+                      >
                         6 THỰC PHẨM BỔ NÃO, TĂNG CƯỜNG TRÍ NHỚ BẠN NÊN ĂN...
-                      </a>
+                      </Link>
                     </Card.Title>
                     <Card.Text>
                       Chúng ta đều biết rằng uống cà phê thường giúp chúng ta
                       tỉnh táo lâu hơn và linh hoạt hơn. Để tăng sự tập...
                     </Card.Text>
                     <div className="readMore-sale readMore-blog mt-5">
-                      <a href="#">
-                        XEM THÊM <i className="fa-solid fa-angles-right"></i>
-                      </a>
+                      <Link as={Link} to="/newdetail">
+                        XEM THÊM <i class="fa-solid fa-angles-right"></i>
+                      </Link>
                     </div>
                   </Card.Body>
                 </Card>
@@ -339,13 +356,18 @@ const Home = () => {
                   <Card.Body>
                     <p className="more-blogs mb-2">
                       <span>
-                        <i className="fa-regular fa-clock"></i> 15:25 - 13/07/2018
+                        <i className="fa-regular fa-clock"></i> 15:25 -
+                        13/07/2018
                       </span>
                     </p>
                     <Card.Title>
-                      <a href="#/" className="card-blog-title mb-3">
+                      <Link
+                        as={Link}
+                        to="/newdetail"
+                        className="card-blog-title mb-3"
+                      >
                         NẤU ĂN NGON HƠN NHỜ THỰC PHẨM SẠCH
-                      </a>
+                      </Link>
                     </Card.Title>
                     <Card.Text>
                       Ăn uống là chuyện muôn thuở của con người. Ngày xưa chỉ
@@ -353,9 +375,9 @@ const Home = () => {
                       phẩm...
                     </Card.Text>
                     <div className="readMore-sale readMore-blog mt-5">
-                      <a href="#">
-                        XEM THÊM <i className="fa-solid fa-angles-right"></i>
-                      </a>
+                      <Link as={Link} to="/newdetail">
+                        XEM THÊM <i class="fa-solid fa-angles-right"></i>
+                      </Link>
                     </div>
                   </Card.Body>
                 </Card>
