@@ -240,8 +240,8 @@ const Home = () => {
                     libero. Nam sodales sem egestas sem blandit volutpat.
                   </h5>
                   <h6 className="item-product--Kushova mt-3 mb-4">
-                    <i class="fa-solid fa-minus"></i> Kushova
-                    <i class="fa-solid fa-minus"></i>
+                    <i className="fa-solid fa-minus"></i> Kushova
+                    <i className="fa-solid fa-minus"></i>
                   </h6>
                 </Carousel.Caption>
               </Carousel.Item>
@@ -264,8 +264,8 @@ const Home = () => {
                     libero. Nam sodales sem egestas sem blandit volutpat.
                   </h5>
                   <h6 className="item-product--Kushova mt-4">
-                    <i class="fa-solid fa-minus"></i> Kushova
-                    <i class="fa-solid fa-minus"></i>
+                    <i className="fa-solid fa-minus"></i> Kushova
+                    <i className="fa-solid fa-minus"></i>
                   </h6>
                 </Carousel.Caption>
               </Carousel.Item>
@@ -288,8 +288,8 @@ const Home = () => {
                     libero. Nam sodales sem egestas sem blandit volutpat.
                   </h5>
                   <h6 className="item-product--Kushova mt-4">
-                    <i class="fa-solid fa-minus"></i> Kushova
-                    <i class="fa-solid fa-minus"></i>
+                    <i className="fa-solid fa-minus"></i> Kushova
+                    <i className="fa-solid fa-minus"></i>
                   </h6>
                 </Carousel.Caption>
               </Carousel.Item>
@@ -321,7 +321,8 @@ const Home = () => {
                   <Card.Body>
                     <p className="more-blogs mb-2">
                       <span>
-                        <i class="fa-regular fa-clock"></i> 14:46 - 29/06/2018
+                        <i className="fa-regular fa-clock"></i> 14:46 -
+                        29/06/2018
                       </span>
                     </p>
                     <Card.Title>
@@ -355,7 +356,8 @@ const Home = () => {
                   <Card.Body>
                     <p className="more-blogs mb-2">
                       <span>
-                        <i class="fa-regular fa-clock"></i> 15:25 - 13/07/2018
+                        <i className="fa-regular fa-clock"></i> 15:25 -
+                        13/07/2018
                       </span>
                     </p>
                     <Card.Title>

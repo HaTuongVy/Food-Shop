@@ -18,40 +18,54 @@ import {
   Row,
   lldata,
 } from "react-bootstrap";
+// import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 import ListProduct from "../components/ListProduct";
 import TopBanner from "../components/TopBanner";
 import DataProduct from "../connect/DataProduct";
+// import { numPrt } from "../redux/DataRender";
 import CategoriesService from "../service/CategoriesService";
-import ProductsService from "../service/ProductsService";
 
 const ShopStore = () => {
-  const [show, setShow] = React.useState(false);
-  const [show1, setShow1] = React.useState(false);
-
-  const [catId, setCatId] = React.useState([]);
-
   const [categories, setCategories] = useState([]);
 
   const loadData = () => {
-    CategoriesService.list().then((res) => setCategories(res.data));
+    CategoriesService.list().then((res) => {
+      setCategories(res.data);
+    });
   };
 
+  const [catId, setCatId] = React.useState([]);
+
+  // const [dataAll, setDataAll] = useState();
+
+  const { id } = useParams();
+
+  const menuId = Number(id);
+
+
+
+  let menuCatId =
+    categories.some((a) => a.PARENT_ID === menuId) ?
+    categories.filter((data) => data.PARENT_ID === menuId).map((a) => a.CAT_ID) : [menuId];
+        
   useEffect(() => {
     loadData();
-  }, []);
+      setCatId(menuCatId);
+  }, [menuId]);
 
   // Danh mục Rau- Củ -Quả
   const dataParent = categories.filter((a) => a.PARENT_ID === 0);
 
-  // Danh mục Thịt -Hải sản
-
+  // Hàm callback gọi data từ component con
   const callbackFunction = (childData) => {
+    // dispatch(numPrt(childData));
     setCatId(childData);
   };
 
   return (
-    <div className="" style={{ height: "1800px" }}>
-      <TopBanner content="Rau - củ - quả" />
+    <div className="" style={{ height: "2200px" }}>
+      <TopBanner content="Cửa hàng" />
       <Container className="mt-4">
         <Row className="gx-3">
           <Col md={3}>
@@ -63,11 +77,11 @@ const ShopStore = () => {
                 Danh Mục sản phẩm
               </ListGroup.Item>
 
-
               {dataParent.map((data, id) => {
                 const dataPlantAll = categories.filter(
                   (a) => a.PARENT_ID === data.CAT_ID
                 );
+
                 return (
                   <ListProduct
                     key={id}
@@ -126,7 +140,7 @@ const ShopStore = () => {
             </Row>
 
             <Row className="">
-              <DataProduct CatId={[...catId]} />
+              <DataProduct CatId={catId} />
             </Row>
           </Col>
         </Row>
