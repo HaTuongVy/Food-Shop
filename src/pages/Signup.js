@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import TopBanner from "../components/TopBanner";
 import Footer from "../containers/Footer";
@@ -5,6 +6,35 @@ import Headers from "../containers/Header";
 import "./Signup.css";
 
 const Signup = () => {
+  const [username, setUsername] = useState("");
+  const [fullname, setFullname] = useState();
+  const [password, setPassword] = useState("");
+  const [repassword, setRepassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [street, setStreet] = useState("");
+
+  const handleClickBtn = () => {
+    let object = {
+      username: username,
+      fullname: fullname,
+      password: password,
+      repassword: repassword,
+      email: email,
+      phone: phone,
+      street: street,
+    };
+
+    let signUpList = localStorage.getItem("signUpList");
+    if (signUpList) {
+      let arr = JSON.stringify(object);
+      arr.push(object);
+      localStorage.setItem("signUpList", JSON.stringify(arr));
+    } else {
+      localStorage.setItem("signUpList", JSON.stringify([object]));
+    }
+  };
+
   return (
     <>
       <Headers></Headers>
@@ -28,6 +58,8 @@ const Signup = () => {
                     </Form.Label>
                     <Col sm={9}>
                       <Form.Control
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
                         className="signup-button-padding"
                         placeholder="Tên đăng nhập"
                       />
@@ -44,6 +76,8 @@ const Signup = () => {
                     </Form.Label>
                     <Col sm={9}>
                       <Form.Control
+                        value={fullname}
+                        onChange={(e) => setFullname(e.target.value)}
                         className="signup-button-padding"
                         placeholder="Họ và tên"
                       />
@@ -60,6 +94,8 @@ const Signup = () => {
                     </Form.Label>
                     <Col sm={9}>
                       <Form.Control
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                         className="signup-button-padding"
                         type="password"
                         placeholder="Mật khẩu"
@@ -77,6 +113,8 @@ const Signup = () => {
                     </Form.Label>
                     <Col sm={9}>
                       <Form.Control
+                        value={repassword}
+                        onChange={(e) => setRepassword(e.target.value)}
                         className="signup-button-padding"
                         type="password"
                         placeholder="Nhập lại mật khẩu"
@@ -94,6 +132,8 @@ const Signup = () => {
                     </Form.Label>
                     <Col sm={9}>
                       <Form.Control
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         className="signup-button-padding"
                         type="email"
                         placeholder="Email"
@@ -111,6 +151,8 @@ const Signup = () => {
                     </Form.Label>
                     <Col sm={9}>
                       <Form.Control
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
                         className="signup-button-padding"
                         placeholder="Số điện thoại"
                       />
@@ -120,77 +162,39 @@ const Signup = () => {
                   <Form.Group
                     as={Row}
                     className="mb-3"
-                    controlId="formHorizontalPhone"
-                  >
-                    <Form.Label column sm={3} className="signup-control-lable">
-                      Tỉnh thành
-                    </Form.Label>
-                    <Col sm={9}>
-                      <Form.Select
-                        aria-label="Default select example"
-                        className="signup-button-padding"
-                      >
-                        <option>-- Tỉnh thành --</option>
-                        <option value="1">Hà Nội</option>
-                        <option value="2">Hà Giang</option>
-                        <option value="3">Hồ Chí Minh</option>
-                      </Form.Select>
-                    </Col>
-                  </Form.Group>
-
-                  <Form.Group
-                    as={Row}
-                    className="mb-3"
-                    controlId="formHorizontalPhone"
-                  >
-                    <Form.Label column sm={3} className="signup-control-lable">
-                      Quận huyện
-                    </Form.Label>
-                    <Col sm={9}>
-                      <Form.Select
-                        aria-label="Default select example"
-                        className="signup-button-padding"
-                      >
-                        <option>-- Quận huyện --</option>
-                        <option value="1">Nam Từ Liêm</option>
-                        <option value="2">Quận 5</option>
-                        <option value="3">Quận 3</option>
-                      </Form.Select>
-                    </Col>
-                  </Form.Group>
-
-                  <Form.Group
-                    as={Row}
-                    className="mb-3"
-                    controlId="formHorizontalAddress"
+                    controlId="formHorizontalStreet"
                   >
                     <Form.Label column sm={3} className="signup-control-lable">
                       Địa chỉ
                     </Form.Label>
                     <Col sm={9}>
                       <Form.Control
+                        value={street}
+                        onChange={(e) => setStreet(e.target.value)}
                         className="signup-button-padding"
                         placeholder="Địa chỉ"
                       />
                     </Col>
                   </Form.Group>
+
+                  <div className="text-center">
+                    <Button
+                      variant="warning"
+                      type="submit"
+                      className="signup-btn-submit me-2"
+                      onClick={(e) => handleClickBtn()}
+                    >
+                      <i class="fa-regular fa-circle-check"></i>&nbsp; Đăng ký
+                    </Button>
+                    <Button
+                      variant="warning"
+                      type="submit"
+                      className="signup-btn-submit ms-2"
+                    >
+                      <i class="fa-solid fa-xmark"></i>&nbsp; Hủy bỏ
+                    </Button>
+                  </div>
                 </Form>
-                <div className="text-center">
-                  <Button
-                    variant="warning"
-                    type="submit"
-                    className="signup-btn-submit me-2"
-                  >
-                    <i class="fa-regular fa-circle-check"></i>&nbsp; Đăng ký
-                  </Button>
-                  <Button
-                    variant="warning"
-                    type="submit"
-                    className="signup-btn-submit ms-2"
-                  >
-                    <i class="fa-solid fa-xmark"></i>&nbsp; Hủy bỏ
-                  </Button>
-                </div>
               </div>
             </div>
           </Col>

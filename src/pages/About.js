@@ -1,5 +1,7 @@
 import { Col, Container, ProgressBar, Row } from "react-bootstrap";
+import FooterAdd from "../components/FooterAdd";
 import TopBanner from "../components/TopBanner";
+import "./About.css";
 
 const Aboutus = () => {
   return (
@@ -11,6 +13,7 @@ const Aboutus = () => {
             <Row>
               <div className="mt-5 mb-3">
                 <h4 className="text-center">CÂU CHUYỆN VỀ CHÚNG TÔI</h4>
+                <div className="line"></div>
               </div>
               <Col className="col-xs-12 col-md-6">
                 <p>
@@ -39,6 +42,7 @@ const Aboutus = () => {
             <Row>
               <div className="mt-5 mb-3">
                 <h4 className="text-center">KỸ NĂNG CỦA CHÚNG TÔI</h4>
+                <div className="line"></div>
               </div>
               <Col className="col-xs-12 col-md-6">
                 <div className="mb-4">
@@ -79,9 +83,108 @@ const Aboutus = () => {
                 </p>
               </Col>
             </Row>
+            <Row>
+              <div className="mt-5 mb-3">
+                <h4 className="text-center">ĐỘI CỦA CHÚNG TÔI</h4>
+                <div className="line"></div>
+              </div>
+              <Col>
+                <div className="container-img">
+                  <img
+                    src={
+                      process.env.PUBLIC_URL + "../img/custom-teammember-1.jpg"
+                    }
+                    className="rounded-circle image"
+                    style={{ maxWidth: "100%" }}
+                    alt="251x260"
+                  ></img>
+                  <div className="middle">
+                    <div className="text">
+                      <i className="fa-brands fa-facebook-f"></i> &ensp;&ensp;
+                      <i className="fa-brands fa-linkedin-in"></i>&ensp;&ensp;
+                      <i className="fa-brands fa-google-plus-g"></i>
+                    </div>
+                  </div>
+                  <div className="text-center mt-2">
+                    <h6>Mr Ben</h6>
+                    <h6>Nhóm Hỗ Trợ</h6>
+                  </div>
+                </div>
+              </Col>
+              <Col>
+                <div className="container-img">
+                  <img
+                    src={
+                      process.env.PUBLIC_URL + "../img/custom-teammember-2.jpg"
+                    }
+                    className="rounded-circle image"
+                    style={{ maxWidth: "100%" }}
+                    alt="251x260"
+                  ></img>
+                  <div className="middle">
+                    <div className="text">
+                      <i className="fa-brands fa-facebook-f"></i> &ensp;&ensp;
+                      <i className="fa-brands fa-linkedin-in"></i>&ensp;&ensp;
+                      <i className="fa-brands fa-google-plus-g"></i>
+                    </div>
+                  </div>
+                  <div className="text-center mt-2">
+                    <h6>Mr John</h6>
+                    <h6>CEOC</h6>
+                  </div>
+                </div>
+              </Col>
+              <Col>
+                <div className="container-img">
+                  <img
+                    src={
+                      process.env.PUBLIC_URL + "../img/custom-teammember-3.jpg"
+                    }
+                    className="rounded-circle image"
+                    style={{ maxWidth: "100%" }}
+                    alt="251x260"
+                  ></img>
+                  <div className="middle">
+                    <div className="text">
+                      <i className="fa-brands fa-facebook-f"></i> &ensp;&ensp;
+                      <i className="fa-brands fa-linkedin-in"></i>&ensp;&ensp;
+                      <i className="fa-brands fa-google-plus-g"></i>
+                    </div>
+                  </div>
+                  <div className="text-center mt-2">
+                    <h6>Mr Henry</h6>
+                    <h6>Nhóm Hỗ Trợ</h6>
+                  </div>
+                </div>
+              </Col>
+              <Col>
+                <div className="container-img">
+                  <img
+                    src={
+                      process.env.PUBLIC_URL + "../img/custom-teammember-4.jpg"
+                    }
+                    className="rounded-circle image"
+                    style={{ maxWidth: "100%" }}
+                    alt="251x260"
+                  ></img>
+                  <div className="middle">
+                    <div className="text">
+                      <i className="fa-brands fa-facebook-f"></i> &ensp;&ensp;
+                      <i className="fa-brands fa-linkedin-in"></i>&ensp;&ensp;
+                      <i className="fa-brands fa-google-plus-g"></i>
+                    </div>
+                  </div>
+                  <div className="text-center mt-2">
+                    <h6>Rokan Tech</h6>
+                    <h6>Lập Trình Viên</h6>
+                  </div>
+                </div>
+              </Col>
+            </Row>
           </Col>
         </Row>
       </Container>
+      <FooterAdd></FooterAdd>
     </>
   );
 };
