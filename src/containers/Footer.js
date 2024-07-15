@@ -63,8 +63,8 @@ const Footer = () => {
                   <div className="footer-line"></div>
                   <div className="mt-4 footer-contact-icon">
                     <p>
-                      <i className="fa-solid fa-location-dot"></i>&nbsp; 32 Võ Văn
-                      Dũng, Đống Đa, Hà Nội
+                      <i className="fa-solid fa-location-dot"></i>&nbsp; 32 Võ
+                      Văn Dũng, Đống Đa, Hà Nội
                     </p>
                     <p>
                       <i className="fa-solid fa-phone"></i>&nbsp; (84) 7308 6680
@@ -173,7 +173,7 @@ const Footer = () => {
           </Row>
         </Container>
         <div className="footer-line-copy">
-          <p className="footer-line-copycom">Copyright by Food.com</p>
+          <p className="footer-line-copycom">Copyright by Foodfarm.com</p>
         </div>
       </div>
     </>
